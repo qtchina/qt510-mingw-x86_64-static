@@ -1,0 +1,14 @@
+prefix=/opt/mxe/usr/x86_64-w64-mingw32.static/qt5
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Quick
+Description: Qt Quick module
+Version: 5.10.1
+Libs: -L${libdir} -lQt5Quick 
+Libs.private: -L/opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Qml.a -L/opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Gui.a -lcomdlg32 -loleaut32 -limm32 -lopengl32 -L/opt/mxe/usr/x86_64-w64-mingw32.static/lib -lharfbuzz -lcairo -lgobject-2.0 -lfontconfig -lm -lusp10 -lmsimg32 -lpixman-1 -lffi -lexpat -lfreetype -lbz2 -lpng16 -lharfbuzz_too -lfreetype_too -lglib-2.0 -lshlwapi -lpcre -lintl -liconv /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Network.a -ldnsapi -liphlpapi -lssl -lcrypto -lgdi32 -lcrypt32 /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Core.a -lmpr -lnetapi32 -luserenv -lversion -lws2_32 -lkernel32 -luser32 -lshell32 -luuid -lole32 -ladvapi32 -lwinmm -lz -lpcre2-16 /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Network.a -L/opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib -ldnsapi -liphlpapi -lssl -lcrypto -lgdi32 -lcrypt32 /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Core.a -lmpr -lnetapi32 -luserenv -lversion -lws2_32 -lkernel32 -luser32 -lshell32 -luuid -lole32 -ladvapi32 -lwinmm -lz -lpcre2-16 
+Cflags: -DQT_QUICK_LIB -I${includedir}/QtQuick -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Qml
+

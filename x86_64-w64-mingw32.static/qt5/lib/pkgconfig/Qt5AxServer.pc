@@ -1,0 +1,14 @@
+prefix=/opt/mxe/usr/x86_64-w64-mingw32.static/qt5
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 AxServer
+Description: Qt AxServer module
+Version: 5.10.1
+Libs: -L${libdir} -lQt5AxServer 
+Libs.private: -L/opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5AxBase.a -L/opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib -L/opt/mxe/usr/x86_64-w64-mingw32.static/lib /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Widgets.a -luxtheme -ldwmapi /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Gui.a -lcomdlg32 -loleaut32 -limm32 -lopengl32 -lharfbuzz -lcairo -lgobject-2.0 -lfontconfig -lm -lusp10 -lmsimg32 -lgdi32 -lpixman-1 -lffi -lexpat -lfreetype -lbz2 -lpng16 -lharfbuzz_too -lfreetype_too -lglib-2.0 -lshlwapi -lpcre -lintl -liconv /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Core.a -lmpr -lnetapi32 -luserenv -lversion -lws2_32 -lkernel32 -luser32 -lshell32 -luuid -lole32 -ladvapi32 -lwinmm -lz -lpcre2-16  
+Cflags: -DQT_AXSERVER_LIB -I${includedir}/QtAxServer -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Widgets Qt5AxBase
+

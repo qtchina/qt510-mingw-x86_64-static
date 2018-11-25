@@ -1,0 +1,14 @@
+prefix=/opt/mxe/usr/x86_64-w64-mingw32.static/qt5
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 DBus
+Description: Qt DBus module
+Version: 5.10.1
+Libs: -L${libdir} -lQt5DBus 
+Libs.private: -L/opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Core.a -lmpr -lnetapi32 -luserenv -lversion -lws2_32 -lkernel32 -luser32 -lshell32 -luuid -lole32 -ladvapi32 -lwinmm -lz -lpcre2-16 -ladvapi32 -lnetapi32 -luser32 -L/opt/mxe/usr/x86_64-w64-mingw32.static/lib -ldbus-1 -lws2_32 -liphlpapi -ldbghelp 
+Cflags: -DQT_DBUS_LIB -I${includedir}/QtDBus -I${includedir}
+Requires: Qt5Core
+

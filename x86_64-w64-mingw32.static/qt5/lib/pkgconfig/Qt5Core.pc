@@ -1,0 +1,15 @@
+prefix=/opt/mxe/usr/x86_64-w64-mingw32.static/qt5
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+host_bins=${prefix}/bin
+qt_config=release c++11 c++14 c++1z concurrent dbus static stl
+
+Name: Qt5 Core
+Description: Qt Core module
+Version: 5.10.1
+Libs: -L${libdir} -lQt5Core 
+Libs.private: -lmpr -lnetapi32 -luserenv -lversion -lws2_32 -lkernel32 -luser32 -lshell32 -luuid -lole32 -ladvapi32 -lwinmm -lz -lpcre2-16 
+Cflags: -DQT_CORE_LIB -I${includedir}/QtCore -I${includedir}
+

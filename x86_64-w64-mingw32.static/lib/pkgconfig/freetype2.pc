@@ -1,0 +1,14 @@
+prefix=/opt/mxe/usr/x86_64-w64-mingw32.static
+exec_prefix=/opt/mxe/usr/x86_64-w64-mingw32.static
+libdir=/opt/mxe/usr/x86_64-w64-mingw32.static/lib
+includedir=/opt/mxe/usr/x86_64-w64-mingw32.static/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 22.1.16
+Requires:
+Requires.private: zlib
+Libs: -L${libdir} -lfreetype
+Libs.private: -lbz2 -lpng16 -lz -lharfbuzz -lcairo -lgobject-2.0 -lfontconfig -lglib-2.0 -lm -lusp10 -lmsimg32 -lgdi32 -lpixman-1 -L/opt/mxe/usr/x86_64-w64-mingw32.static/lib/../lib -lffi -lexpat -lfreetype -lbz2 -lpng16 -lz -lws2_32 -lole32 -lwinmm -lshlwapi -lpcre -lintl -liconv -lharfbuzz_too -lfreetype_too -lglib-2.0 -lws2_32 -lole32 -lwinmm -lshlwapi -lpcre -lintl -liconv
+Cflags: -I${includedir}/freetype2

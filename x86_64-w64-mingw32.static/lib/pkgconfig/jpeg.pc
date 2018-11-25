@@ -1,0 +1,4 @@
+Name: jpeg
+Version: 0
+Description: jpeg
+Libs: -ljpeg

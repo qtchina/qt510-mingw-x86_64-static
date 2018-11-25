@@ -1,0 +1,14 @@
+prefix=/opt/mxe/usr/x86_64-w64-mingw32.static/qt5
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Qml
+Description: Qt Qml module
+Version: 5.10.1
+Libs: -L${libdir} -lQt5Qml 
+Libs.private: -L/opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Network.a -ldnsapi -liphlpapi -lssl -lcrypto -lgdi32 -lcrypt32 /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/lib/libQt5Core.a -lmpr -lnetapi32 -luserenv -lversion -lws2_32 -lkernel32 -luser32 -lshell32 -luuid -lole32 -ladvapi32 -lwinmm -lz -lpcre2-16  
+Cflags: -DQT_QML_LIB -I${includedir}/QtQml -I${includedir}
+Requires: Qt5Core Qt5Network
+

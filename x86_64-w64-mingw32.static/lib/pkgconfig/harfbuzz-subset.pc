@@ -1,0 +1,12 @@
+prefix=/opt/mxe/usr/x86_64-w64-mingw32.static
+exec_prefix=/opt/mxe/usr/x86_64-w64-mingw32.static
+libdir=/opt/mxe/usr/x86_64-w64-mingw32.static/lib
+includedir=/opt/mxe/usr/x86_64-w64-mingw32.static/include
+
+Name: harfbuzz
+Description: HarfBuzz font subsetter
+Version: 1.7.6
+
+Requires: harfbuzz
+Libs: -L${libdir} -lharfbuzz-subset
+Cflags: -I${includedir}/harfbuzz
